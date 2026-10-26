@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+	<meta Author="pat cain">
+	<meta LastAuthor="pat cain">
+	<meta Revision=2 />
+	<meta LastSaved="2026-09-26T20:31:00Z">
+	<title>eCX New User Guide</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body bgcolor="#E6F1E1" lang=EN-US link="#467886" vlink="#96607D">
+	<div class="sitewrapper">
+		<div class="bulma-container logo pl-5">
+			<img src="ecrimex_logo.png" width="250" />
+			<div class="mr-5">
+				Select a language to translate this page:<br />
+				<div id="google_translate_element"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element'
+				);
+			}
+		</script>
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googl
+eTranslateElementInit"></script>
+	</div>
+	<h1 class="center bulma-has-text-centered is-size-3 is-family-sans-serif --bulma-primary">APWG eCrime eXchange
+		(eCX) New User Start-up Guide</h1>
+	</div>
+
+	<div class="content toc mt-5">
+		<h2 class="toc-header">Table of Contents</h2>
+		<ol class="toc-list" role="list">
+			<li>
+				<a href="#_Toc00"><span class="toc-line">Introduction</span></a>
+			</li>
+			<li>
+				<a href="#_Toc01"><span class="toc-line">The User Onboarding Process</span></a>
+			</li>
+			<li>
+				<a href="#_Toc02"><span class="toc-line">The Modules</span></a>
+			</li>
+			<li>
+				<a href="#_Toc03"><span class="toc-line">Requesting read access to a module</span></a>
+			</li>
+			<li>
+				<a href="#_Toc04"><span class="toc-line">Requesting submission access to a module</span></a>
+			</li>
+			<li>
+				<a href="#_Toc05"><span class="toc-line">Confidence Factors</span></a>
+				<ol>
+					<a href="#_Toc06"><span class="toc-line2">Updating Confidence Factors</span></a>
+				</ol>
+			</li>
+			<li>
+				<a href="#_Toc07"><span class="toc-line">Using the API</span></a>
+
+			</li>
+			<ol>
+				<a href="#_Toc08"><span class="toc-line">The Sandbox</span></a><br />
+				<a href="#_Toc09"><span class="toc-line">Accessing eCX data via the API</span></a>
+				</li>
+			</ol>
+			<li>
+				<a href="#_Toc10"><span class="toc-line">Documentation Available in the eCX GUI</span></a>
+			</li>
+			<li>
+				<a href="#_Toc11"><span class="toc-line">Documentation Available in the APWG git</span></a>
+			</li>
+			<li>
+				<a href="#_Toc12"><span class="toc-line">Many Frequently Asked Questions (FAQ) are answered
+						at</span></a>
+			</li>
+			<li>
+				<a href="#_Toc13"><span class="toc-line">Assistance and Support</span></a>
+			</li>
+		</ol>
+	</div>
+	<div class="mt-4 ml-4">
+		<h2 id="_Toc01" class="is-family-sans-serif --bulma-primary">1. Introduction</h2>
+		<p class="content">This instructional document is the &quot;new user&quot; guide to explain our processes and how to use the
+			eCrime eXchange efficiently.</p>
+		<p>The eCX has two access paths, each with read and write functionality for
+			the authorized user: a GUI at <u>https://ecrimex.net</u>, and the API at https://ecrimex.net/api/v1/<module>
+				.
+		</p>
+
+		<p>The eCX data is divided into different data modules for different types of data, representing different
+			kinds of cybercrime events (e.g. establishment
+			of a phishing URL, registration of a brand-abusing domain name for a phishing campaign, etc.).</p>
+
+		<p>This division allows for each module to hold different data elements in records that represent and
+			archive specific kinds of
+			common cybercriminal events. For example, the phish module has a &apos;url&apos; field as that&apos;s
+			essential for phishing collectors. The malicious
+			domain module does not have a URL field because the data records hold DNS names.</p>
+
+		<h2 id="_Toc01" class="is-family-sans-serif --bulma-primary">2. The User Onboarding Process</h2>
+
+		<p>The overall user experience follows this path:</p>
+		<ol>
+			<li><u>Initial eMail Invitation</u>. eCX users are sent an invitation by email to
+				join the platform. Clicking on the invitation link allows the new user to setup
+				an eCX account - entering their name, selecting a password, etc. - then clicking OK to submit the
+				new account for validation by eCX personnel.
+			</li>
+			<li><u>eCX User Validation</u>. The system administrators are notified when a user sets up their initial
+				account and approves the new user&apos;s account. There may be a delay in the user setting up the
+				account
+				and the system admins performing their task.
+			</li>
+			<li><u>Initial Module Access</u>. A new user has read access to the phish data module by default. This
+				access is for both the
+				GUI and the API. We suggest that a new user logs into the eCX GUI (https://ecrimex.net) to acquaint
+				themselves. Roll-over “modules”
+				(at the top of the page), and select &quot;phish&quot; to view the current data in the phish module.
+			</li>
+			<li><u>The User Profile</u>. At the top right of the GUI page is your username. Clicking on it will show
+				two options: &quot;Log Out&quot;
+				and &quot;Profile&quot;. Log out will do just that. Your profile shows:
+				<ol>
+					<li>Information about you;</li>
+
+					<li>Information about your organization&apos;s membership status;</li>
+
+					<li>Your API key. The key can be changed by clicking on the icon at the right of the key
+						display.</li>
+				</ol>
+			<li><u>Changing your Password</u>. The easiest way to change your password is to visit
+				https://ecrimex.net and click the “forgot your password?” link.</li>
+			</li>
+		</ol>
+		</p>
+		<p>If your co-workers move on from your organization, we would appreciate a note letting us know so we
+			can disable their accounts, reducing our password exposure on unused accounts.</p>
+
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="#_Toc02">3. The Modules</h2>
+		<p>The ECX data modules are:</p>
+		<ol>
+			<li><u>Phish</u>. This data set contains URLs of phishing sites and the brand they are
+				impersonating.</li>
+			<li><u>ReportPhishing</u>. This contains the slightly-processed emails sent by the public to our
+				reportphishing@apwg.org email address. Normally receives 300,000-500,000 monthly.
+			<li><u>Malicious_domain</u>. DNS domains that are a fake store front or serving malicious content.
+			<li><u>Malicious_IP</u>. IP Addresses that appear to only attack or probe others on the Internet.
+			<li><u>Cryptocurrency-addresses</u>. Records of crypto WalletIds seen in crimeware.
+			<li><u>Malicious-SMS</u>. This is data retrieved from phish or malicious SMS or TXT messages.
+		</ol>
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc03">4. Requesting read access to a module</h2>
+
+		<p>To gain access to a specific module, log into the GUI,
+			select the module of interest, read the description, and click the &quot;Request
+			Access&quot; button. System admins will change your permissions.</p>
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc04">5. Requesting submission access to a module</h2>
+
+		<p>Access to a module in the GUI gives you the ability to
+			submit data via the GUI. </p>
+
+		<p>Submission via the API requires the submission privilege for
+			that module. We ask that you test and perfect your API scripts using the eCX
+			sandbox before asking for submission rights to the <span class=GramE>production
+				eCX API</span>. We have learned our lessons.</p>
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc05">6. Confidence Factors</h2>
+
+		<p> All of the eCX API /endpoints require a record to have a
+			<b>Confidence
+				Factor</b> that relates to the degree of manual, human processing used in
+			scoring the report as an indicator of its trustability. As follows:
+		</p>
+
+		<p style='margin-left:.5in;text-indent:-.25in;''>
+			<b><u>100 CF</u> </b>= Manual inspection/confirmation by an APWG member reporter,
+			submitting data under terms set out in the APWG Data Sharing Agreement
+				</p>
+
+				<p style=' margin-left:.5in;text-indent:-.25in;'>
+			<b><u>90 CF</u> </b>= Automated inspection/discovery by Artificial Intelligence or
+			Machine Learning systems directly curated by an APWG member submitter, under
+			terms set out in the APWG Data Sharing Agreement. Users are encouraged to
+			verify records at this level before just indiscriminately blocking them.
+		</p>
+
+		<p style='margin-left:.5in;text-indent:-.25in;'>
+			<b><u>50 CF</u> </b>= Machine data-capture or third-party volunteered report
+			<b><i>without</i></b>
+			confirmation by APWG member personnel or by a member-curated AI/ML.
+		</p>
+
+		<p style='margin-left:.5in;'>
+			This is third-party source or <span class=GramE>general public</span> sourcing so - on its
+			face,
+			without further meta-data that would speak to reliability - the assumption is
+			that the record has a 50/50 chance of being accurate, therefore requiring user
+			confirmation.
+		</p>
+
+		<p style='margin-left:.5in;text-indent:-.25in;'>
+			<b><u>0 CF</u> </b>= False positive. Data that, after additional investigation, is not a phish nor
+			malicious.
+		</p>
+
+		<h3 class="is-family-sans-serif --bulma-primary" id="_Toc06">Updating Confidence Factors</h3>
+
+		<p>***eCX users may use the GUI or the API to annotate data
+			records to add to their confidence or mark a record as a false <span class=GramE>positive.*</span>**
+		</p>
+
+		<p>False positives have a confidence value of 0 (zero). Log
+			into the eCX GUI, find the record you wish to modify, double click it, change
+			the confidence to 0, and click update. You can also change the confidence value
+			of a record via a PUT command in the API.</p>
+
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc07">7. Using the API</h2>
+
+		<h3 class="is-family-sans-serif --bulma-primary" id="_Toc08">The Sandbox.</h3>
+
+		<p>There is a sandbox of the eCX that periodically gets data
+			inserted for testing. It has no direct connection to the production
+			environment. It is located at <a href="https://sandbox.ecrimex.net">https://sandbox.ecrimex.net</span></a>,
+			and your API key should work just fine there.</p>
+
+		<h3 class="is-family-sans-serif --bulma-primary"><a id="_Toc09">Accessing eCX data via the API:</a></h3>
+
+		<p>For each API request, your
+			API key should reside in an HTTP Authorization header, like &quot;Authentication:
+			Bearer api-key-value&quot;</p>
+
+		<p>As an example, using <span class=GramE>curl</span> to retrieve the latest phish:</p>
+
+		<figure style='text-indent:-.25in;'>
+			curl -k https://sandbox.ecrimex.net/api/v1/phish -H &quot;Authorization:
+			Bearer 0123my-api-key890&quot; -H &quot;Content-Type: application/json&quot;
+		</figure>
+
+		<p><span style='font-family:Helvetica;'>Using a python script for API access.<o:p></o:p></span></p>
+
+		def get:
+		<div class="code" style="margin-left:.5in;">import requests<br />
+			headers = {<br />
+			<div style="margin-left:.5in;">&quot;Authorization&quot;: Bearer + my_api_key,<br />
+				&quot;Content-Type&quot;: &quot;application/json&quot;<br />
+				}</div>
+			resp = requests.get(&quot;https://sandbox.ecrimex.net/api/v1/phish&quot;, headers=headers,
+			verify=False )<br />
+			print("API Response: " + str(resp.status_code)+ " " + str(resp.content)) <br />
+		</div>
+		<p>Users may also use their own scripts in any programming language for
+			access. </p>
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc10">8. Documentation Available in the eCX GUI</h2>
+
+		<p>The API User Guide, available under the &quot;Docs&quot; link in the GUI.</p>
+
+		<p>API Swagger Documentation, available in the Swagger API Docs or at <a
+				href="https://apwg.github.io/ecx2-openapi-doc/#/" target="_blank"> Swagger API Docs</a>.</p>
+
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc11">9. Documentation Available in the APWG git:</h2>
+		<p>An <a href="https://apwg.github.io/ecx-new-users-guide/">eCX New User&apos;s Guide</a> is available.</p>
+		<p><span style='font-family:Helvetica'>There are some sample
+				python3 scripts to access the eCX via the API at: <o:p></o:p></span>
+
+			<a href="https://github.com/APWG/ecx3-api-routines"><span
+					style='font-family:Helvetica'>https://github.com/APWG/ecx3-api-routines</span></a>
+		</p>
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc12">10. Many Frequently Asked Questions (FAQ)</h2>
+		<p>Common frequently asked questions about the eCX are answered
+			at: <a href="https://apwg.github.io/ecx2-faq/"><span
+					style='font-family:Helvetica'>https://apwg.github.io/ecx2-faq/</span></a>
+		</p>
+
+		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc13">11. Assistance and Support</h2>
+
+		<p><span style='font-family:Helvetica'>Help is always available
+				via email at </span><a href="mailto:support@ecrimex.net">support@ecrimex.net</a>. Our support staff
+			<span class=GramE>tries</span>
+			to respond promptly. Please include the error message or API call you are
+			having issues with for niceness.</span>
+		</p>
+
+		<p><span style='font-family:Helvetica'>Join the announcement
+				mail list to let users know if things are broken. Sign up at: </span><a
+				href="https://members.apwg.org/mailman3/lists/ecx-announce.members.apwg.org/"><span
+					style='font-family:Helvetica'>https://members.apwg.org/mailman3/lists/ecx-announce.members.apwg.org/</span></a>
+			</span></p>
+
+		<p><span style='font-family:Helvetica'>Check out the new
+				eCX-users mail list, too, at: </span><a
+				href="https://members.apwg.org/mailman3/lists/ecx-users.members.apwg.org/"><span
+					style='font-family:Helvetica'>https://members.apwg.org/mailman3/lists/ecx-users.members.apwg.org/</span></a><span
+				style='font-family:Helvetica'>
+				<o:p></o:p>
+			</span></p>
+
+		<p>As APWG members, you
+			will be added to the members list which is good for general queries and
+			questions about new attackers, techniques, or odd results.
+		</p>
+
+		<p><span style='font-family:Helvetica'>We have a discord
+				server, but we are not yet exactly sure what to do with it. Please send your
+				suggestions regarding the development of this resource to: </span><a
+				href="mailto:support@ecrimex.net"><span
+					style='font-family:Helvetica'>support@ecrimex.net</span></a><span style='font-family:Helvetica'>
+				<o:p></o:p>
+			</span></p>
+
+		<p>
+			<o:p>&nbsp;</o:p>
+		</p>
+
+		<p class="center">
+			<img width=359 height=100 src="ecx-pyramid.png"
+				v:shapes="_x0000_s1027">
+		</p>
+
+	</div>
+
+</body>
+
+</html>
