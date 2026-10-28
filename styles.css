@@ -1,0 +1,72 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    display: block;
+    font-family: Nunito; 
+    color: green;
+}
+
+h2 {
+    display: block;
+    font-family: Nunito; 
+    font-size: 200%;
+    padding-top: 2lvi;
+    color: green;
+}
+.center {
+    text-align: center;
+}
+.font-sans {
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+p {
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+q {
+    font-weight: bold;
+}
+
+.toc {
+    padding-left: 20%;
+    width: 80%;
+}
+.toc-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.toc-list, .toc-list ol {
+  list-style-type: none;
+}
+
+.toc-list {
+  padding: 0;
+}
+
+.toc-list ol {
+  padding-inline-start: 2ch;
+}
+
+.toc-line {
+    text-align: left
+}
+.toc-line2 {
+    text-indent: 10%;
+    padding-top: 0%;
+}
+
+ol {
+    padding: 5ch;
+}
+
+.code {
+    margin-left:.5in;
+}
