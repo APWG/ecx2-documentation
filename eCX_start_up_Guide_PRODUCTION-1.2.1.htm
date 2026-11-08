@@ -15,8 +15,8 @@
 	<div class="sitewrapper">
 		<div class="bulma-container logo pl-5">
 			<img src="ecrimex_logo.png" width="250" />
-			<h1 class="center bulma-has-text-centered is-size-3 is-family-sans-serif --bulma-primary">APWG eCrime eXchange
-		(eCX) New User Start-up Guide</h1>
+			<div><h1 class="center bulma-has-text-centered is-size-3 is-family-sans-serif --bulma-primary">APWG eCrime eXchange
+		(eCX) New User Start-up Guide</h1><p class="center">Version 1.2.1</p></div>
 			<div class="mr-5">
 				Select a language to translate this page:<br />
 				<div id="google_translate_element"></div>
@@ -65,31 +65,24 @@ eTranslateElementInit"></script>
 			<li>
 				<a href="#_Toc10"><span class="toc-line">Documentation Available in the eCX GUI</span></a>
 			</li>
-			<li>
-				<a href="#_Toc11"><span class="toc-line">Documentation Available in the APWG git</span></a>
-			</li>
-			<li>
-				<a href="#_Toc12"><span class="toc-line">Frequently Asked Questions (FAQ)</span></a>
-			</li>
-			<li>
-				<a href="#_Toc13"><span class="toc-line">Assistance and Support</span></a>
-			</li>
+			<li><a href="#_Toc11"><span class="toc-line">Documentation Available in the APWG git</span></a></li>
+			<li><a href="#_Toc12"><span class="toc-line">Frequently Asked Questions (FAQ)</span></a></li>
+			<li><a href="#_Toc13"><span class="toc-line">Assistance and Support</span></a></li>
 		</ol>
 	</div>
 	<div class="mt-4 ml-4">
 		<h2 id="_Toc01" class="is-family-sans-serif --bulma-primary">1. Introduction</h2>
-		<p class="content">This instructional document is the &quot;new user&quot; guide to explain our processes and how to use the
+		<p class="para">This instructional document is the &quot;new user&quot; guide to explain our processes and how to use the
 			eCrime eXchange efficiently.</p>
-		<p>The eCX has two access paths, each with read and write functionality for
-			the authorized user: a GUI at <u>https://ecrimex.net</u>, and the API at https://ecrimex.net/api/v1/<module>
-				.
+		<p class="para">The eCX has two access paths, each with read and write functionality for
+			the authorized user: a GUI at <u>https://ecrimex.net</u>, and the API at https://ecrimex.net/api/v1/&lt;module&gt; .
 		</p>
 
-		<p>The eCX data is divided into different data modules for different types of data, representing different
+		<p class="para">The eCX data is divided into different data modules for different types of data, representing different
 			kinds of cybercrime events (e.g. establishment
 			of a phishing URL, registration of a brand-abusing domain name for a phishing campaign, etc.).</p>
 
-		<p>This division allows for each module to hold different data elements in records that represent and
+		<p class="para">This division allows for each module to hold different data elements in records that represent and
 			archive specific kinds of
 			common cybercriminal events. For example, the phish module has a &apos;url&apos; field as that&apos;s
 			essential for phishing collectors. The malicious
@@ -97,8 +90,8 @@ eTranslateElementInit"></script>
 
 		<h2 id="_Toc01" class="is-family-sans-serif --bulma-primary">2. The User Onboarding Process</h2>
 
-		<p>The overall user experience follows this path:</p>
-		<ol>
+		<p class="para">The overall user experience follows this path:</p>
+		<ol class="big">
 			<li><u>Initial eMail Invitation</u>. eCX users are sent an invitation by email to
 				join the platform. Clicking on the invitation link allows the new user to setup
 				an eCX account - entering their name, selecting a password, etc. - then clicking OK to submit the
@@ -112,22 +105,20 @@ eTranslateElementInit"></script>
 			<li><u>Initial Module Access</u>. A new user has read access to the phish data module by default. This
 				access is for both the
 				GUI and the API. We suggest that a new user logs into the eCX GUI (https://ecrimex.net) to acquaint
-				themselves. Roll-over “modules”
+				themselves. Roll-over &quot;modules&quot; 
 				(at the top of the page), and select &quot;phish&quot; to view the current data in the phish module.
 			</li>
 			<li><u>The User Profile</u>. At the top right of the GUI page is your username. Clicking on it will show
 				two options: &quot;Log Out&quot;
 				and &quot;Profile&quot;. Log out will do just that. Your profile shows:
-				<ol>
+				<ol class="indent">
 					<li>Information about you;</li>
-
 					<li>Information about your organization&apos;s membership status;</li>
-
 					<li>Your API key. The key can be changed by clicking on the icon at the right of the key
 						display.</li>
 				</ol>
 			<li><u>Changing your Password</u>. The easiest way to change your password is to visit
-				https://ecrimex.net and click the “forgot your password?” link.</li>
+				https://ecrimex.net and click the &quot;Forgot your password?&quot; link.</li>
 			</li>
 		</ol>
 		</p>
@@ -137,10 +128,10 @@ eTranslateElementInit"></script>
 
 		<h2 class="is-family-sans-serif --bulma-primary" id="#_Toc02">3. The Modules</h2>
 		<p>The ECX data modules are:</p>
-		<ol>
+		<ol class="big">
 			<li><u>Phish</u>. This data set contains URLs of phishing sites and the brand they are
 				impersonating.</li>
-			<li><u>ReportPhishing</u>. This contains the slightly-processed emails sent by the public to our
+			<li><u>Reportphishing</u>. This contains the slightly-processed emails sent by the public to our
 				reportphishing@apwg.org email address. Normally receives 300,000-500,000 monthly.
 			<li><u>Malicious_domain</u>. DNS domains that are a fake store front or serving malicious content.
 			<li><u>Malicious_IP</u>. IP Addresses that appear to only attack or probe others on the Internet.
@@ -167,29 +158,25 @@ eTranslateElementInit"></script>
 		<h2 class="is-family-sans-serif --bulma-primary" id="_Toc05">6. Confidence Factors</h2>
 
 		<p> All of the eCX API /endpoints require a record to have a
-			<b>Confidence
-				Factor</b> that relates to the degree of manual, human processing used in
+			<b>Confidence Factor</b> that relates to the degree of manual, human processing used in
 			scoring the report as an indicator of its trustability. As follows:
 		</p>
 
 		<p style='margin-left:.5in;text-indent:-.25in;''>
 			<b><u>100 CF</u> </b>= Manual inspection/confirmation by an APWG member reporter,
 			submitting data under terms set out in the APWG Data Sharing Agreement
-				</p>
-
-				<p style=' margin-left:.5in;text-indent:-.25in;'>
+		</p>
+		<p style=' margin-left:.5in;text-indent:-.25in;'>
 			<b><u>90 CF</u> </b>= Automated inspection/discovery by Artificial Intelligence or
 			Machine Learning systems directly curated by an APWG member submitter, under
 			terms set out in the APWG Data Sharing Agreement. Users are encouraged to
 			verify records at this level before just indiscriminately blocking them.
 		</p>
-
 		<p style='margin-left:.5in;text-indent:-.25in;'>
 			<b><u>50 CF</u> </b>= Machine data-capture or third-party volunteered report
 			<b><i>without</i></b>
 			confirmation by APWG member personnel or by a member-curated AI/ML.
 		</p>
-
 		<p style='margin-left:.5in;'>
 			This is third-party source or <span class=GramE>general public</span> sourcing so - on its
 			face,
@@ -205,11 +192,11 @@ eTranslateElementInit"></script>
 
 		<h3 class="is-family-sans-serif --bulma-primary" id="_Toc06">Updating Confidence Factors</h3>
 
-		<p>***eCX users may use the GUI or the API to annotate data
-			records to add to their confidence or mark a record as a false <span class=GramE>positive.*</span>**
+		<p class="box">***eCX users may use the GUI or the API to annotate data
+			records to raise their confidence or to mark a record as a false positive.***
 		</p>
 
-		<p>False positives have a confidence value of 0 (zero). Log
+		<p>False positives have a confidence value of 0 (zero). To mark a record as a false positive, log
 			into the eCX GUI, find the record you wish to modify, double click it, change
 			the confidence to 0, and click update. You can also change the confidence value
 			of a record via a PUT command in the API.</p>
@@ -224,7 +211,7 @@ eTranslateElementInit"></script>
 			environment. It is located at <a href="https://sandbox.ecrimex.net">https://sandbox.ecrimex.net</span></a>,
 			and your API key should work just fine there.</p>
 
-		<h3 class="is-family-sans-serif --bulma-primary"><a id="_Toc09">Accessing eCX data via the API:</a></h3>
+		<h3 class="is-family-sans-serif --bulma-primary" id="_Toc09">Accessing eCX data via the API.</h3>
 
 		<p>For each API request, your
 			API key should reside in an HTTP Authorization header, like &quot;Authentication:
@@ -232,10 +219,10 @@ eTranslateElementInit"></script>
 
 		<p>As an example, using <span class=GramE>curl</span> to retrieve the latest phish:</p>
 
-		<figure style='text-indent:-.25in;'>
+		<code style='text-indent:-.25in;'>
 			curl -k https://sandbox.ecrimex.net/api/v1/phish -H &quot;Authorization:
 			Bearer 0123my-api-key890&quot; -H &quot;Content-Type: application/json&quot;
-		</figure>
+		</code>
 
 		<p><span style='font-family:Helvetica;'>Using a python script for API access.<o:p></o:p></span></p>
 
@@ -248,7 +235,7 @@ eTranslateElementInit"></script>
 			resp = requests.get(&quot;https://sandbox.ecrimex.net/api/v1/phish&quot;, headers=headers,
 			verify=False )<br />
 			print("API Response: " + str(resp.status_code)+ " " + str(resp.content)) <br />
-		</div>
+		</div><br/>
 		<p>Users may also use their own scripts in any programming language for
 			access. </p>
 
